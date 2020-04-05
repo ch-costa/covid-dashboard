@@ -6,13 +6,14 @@ function useGet(resource) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
   useEffect(() => {
+    console.log("resource ", resource);
     async function fetchData() {
       setLoading(true);
       setError();
       const data = await api
         .get(resource)
-        .then(res => res)
-        .catch(err => {
+        .then((res) => res)
+        .catch((err) => {
           setError(err);
         });
       setStats(data);
@@ -23,7 +24,7 @@ function useGet(resource) {
   return {
     stats,
     loading,
-    error
+    error,
   };
 }
 export default useGet;

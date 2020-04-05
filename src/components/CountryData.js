@@ -12,7 +12,7 @@ function CountryData({ country }) {
   return (
     <>
       {stats && stats.data.confirmed.value > 0 && (
-        <li key={iso3} className="country-card">
+        <li className="country-card">
           <div className="aside">
             <span>{flag(iso2)}</span>
             <strong>{iso3}</strong>
