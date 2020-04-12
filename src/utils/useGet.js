@@ -6,7 +6,6 @@ function useGet(resource) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
   useEffect(() => {
-    console.log("resource ", resource);
     async function fetchData() {
       setLoading(true);
       setError();

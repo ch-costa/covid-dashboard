@@ -19,7 +19,6 @@ function CountriesStats({ iso3 }) {
         </div>
       ) : (
         <ul>
-          {/* {JSON.stringify(stats)} */}
           {stats.data.countries &&
             stats.data.countries.map((data) => (
               <CountryData key={data.name} country={data} />
